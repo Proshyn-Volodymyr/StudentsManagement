@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class Human {
+
+public class Human {
+    private String name;
+    private String lastName;
+    Gender gender;
 }
