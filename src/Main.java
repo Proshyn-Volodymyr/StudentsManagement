@@ -28,8 +28,15 @@ public class Main {
         } catch (GroupOverflowException gex) {
             gex.printStackTrace();
         }
+//        try {
+//            group1.searchStudentByLastName("King");
+//        } catch (StudentNotFoundException fex) {
+//            fex.printStackTrace();
+//        }
+//        group1.removeStudentById(123);
+
         for (Student student : group1.getStudents()) {
-            if(student != null){
+            if (student != null) {
                 System.out.println(student.getLastName());
             }
         }
