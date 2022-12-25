@@ -28,6 +28,8 @@ public class Main {
         } catch (GroupOverflowException gex) {
             gex.printStackTrace();
         }
+        /* Search student by last name
+        * */
 //        try {
 //            group1.searchStudentByLastName("King");
 //        } catch (StudentNotFoundException fex) {
@@ -35,10 +37,11 @@ public class Main {
 //        }
 //        group1.removeStudentById(123);
 
-        for (Student student : group1.getStudents()) {
-            if (student != null) {
-                System.out.println(student.getLastName());
-            }
-        }
+//        for (Student student : group1.getStudents()) {
+//            if (student != null) {
+//                System.out.println(student.getLastName());
+//            }
+//        }
+        System.out.println(group1);
     }
 }
