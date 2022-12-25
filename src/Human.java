@@ -4,6 +4,12 @@ public class Human {
     private String lastName;
     Gender gender;
 
+    public Human(String name, String lastName, Gender gender) {
+        this.name = name;
+        this.lastName = lastName;
+        this.gender = gender;
+    }
+
     public String getName() {
         return name;
     }

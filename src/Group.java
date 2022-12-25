@@ -2,6 +2,10 @@ public class Group {
     private String groupName;
     Student[] students = new Student[10];
 
+    public Group(String groupName) {
+        this.groupName = groupName;
+    }
+
     public String getGroupName() {
         return groupName;
     }
@@ -25,6 +29,7 @@ public class Group {
             }
             if (students[i] == null && students[i] != student) {
                 students[i] = student;
+                break;
             }
         }
     }
