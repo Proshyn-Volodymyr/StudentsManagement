@@ -23,14 +23,16 @@ public class Group {
     }
 
     public void addStudent(Student student) throws GroupOverflowException {
+        boolean isAllowToAdd = false;
         for (int i = 0; i < students.length; i++) {
-            if (students.length > 10 || i > 9) {
-                throw new GroupOverflowException("The group of students is already completed");
-            }
             if (students[i] == null && students[i] != student) {
                 students[i] = student;
+                isAllowToAdd = true;
                 break;
             }
+        }
+        if (!isAllowToAdd) {
+            throw new GroupOverflowException("The group of students is already completed");
         }
     }
 
