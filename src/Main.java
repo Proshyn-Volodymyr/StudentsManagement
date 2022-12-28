@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         Group group1 = new Group("TM");
@@ -42,6 +43,7 @@ public class Main {
 //                System.out.println(student.getLastName());
 //            }
 //        }
+        Arrays.sort(group1.students);
         System.out.println(group1);
     }
 }

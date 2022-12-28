@@ -1,4 +1,4 @@
-public class Student extends Human{
+public class Student extends Human implements Comparable{
     private int id;
     private String groupName;
 
@@ -22,5 +22,11 @@ public class Student extends Human{
 
     public void setGroupName(String groupName) {
         this.groupName = groupName;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Student student = (Student) o;
+        return super.getLastName().compareTo(student.getLastName());
     }
 }

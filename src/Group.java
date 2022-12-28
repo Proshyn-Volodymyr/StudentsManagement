@@ -48,29 +48,17 @@ public class Group {
         }
         return false;
     }
-    public String[] sortStudent(Student[] students){
-        String[] lastNameArray = new String[students.length];
-        for (int i = 0; i < students.length; i++) {
-            lastNameArray[i] = students[i].getLastName();
-        }
-        Arrays.sort(lastNameArray);
-        for (int i = 0; i < lastNameArray.length; i++) {
-            Student temp;
-            for (int j = i; j < students.length; j++) {
-                if(lastNameArray[i].equals(students[j].getLastName())){
-                    temp = students[i];
-                    students[i] = students[j];
-                    students[j] = temp;
-                }
-            }
-        }
-        return lastNameArray;
-    }
 
     @Override
     public String toString() {
-        return "Group{" +
-                "students=" + Arrays.toString(sortStudent(students)) +
+        StringBuilder sb = new StringBuilder();
+        for (Student student:students
+        ) {
+            sb.append(student.getLastName()).append(", ");
+        }
+        String result = sb.deleteCharAt(sb.length() - 2).toString();
+        return "Group{ " + getGroupName() +
+                " students=" + result +
                 '}';
     }
 }
