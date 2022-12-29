@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Group {
     private String groupName;
@@ -47,6 +48,9 @@ public class Group {
             }
         }
         return false;
+    }
+    public void sortStudentsByLastName(){
+        Arrays.sort(students, Comparator.nullsFirst(new StudentLastNameComparator()));
     }
 
     @Override

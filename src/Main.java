@@ -43,7 +43,7 @@ public class Main {
 //                System.out.println(student.getLastName());
 //            }
 //        }
-        Arrays.sort(group1.students);
+        group1.sortStudentsByLastName();
         System.out.println(group1);
     }
 }
