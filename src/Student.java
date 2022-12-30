@@ -2,9 +2,10 @@ public class Student extends Human{
     private int id;
     private String groupName;
 
-    public Student(String name, String lastName, Gender gender, int id) {
+    public Student(String name, String lastName, Gender gender, int id, String groupName) {
         super(name, lastName, gender);
         this.id = id;
+        this.groupName = groupName;
     }
 
     public int getId() {
@@ -23,4 +24,14 @@ public class Student extends Human{
         this.groupName = groupName;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name= " + super.getName() + ", " +
+                "Last name= " + super.getLastName() + ", " +
+                "id=" + id +
+                ", groupName='" + groupName + '\'' +
+                ", gender=" + gender +
+                "} " ;
+    }
 }

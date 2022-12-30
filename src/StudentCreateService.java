@@ -15,7 +15,9 @@ public class StudentCreateService {
         System.out.println("Enter the new student's id: ");
         int id = scanner.nextInt();
         scanner.nextLine();
-        newStudent = new Student(name, lastName, genEnum, id);
+        System.out.println("Enter the new student's group name: ");
+        String groupName = scanner.nextLine();
+        newStudent = new Student(name, lastName, genEnum, id, groupName);
         return newStudent;
     }
 
