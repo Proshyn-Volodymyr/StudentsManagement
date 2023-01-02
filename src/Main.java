@@ -47,9 +47,11 @@ public class Main {
 //                System.out.println(student.getLastName());
 //            }
 //        }
-        group1.sortStudentsByLastName();
-        String studentCsv = csvStr.toStringRepresentation(scs.createStudent());
-        System.out.println(csvStr.fromStringRepresentation(studentCsv).toString());
+//        group1.sortStudentsByLastName();
+//        String studentCsv = csvStr.toStringRepresentation(scs.createStudent());
+//        System.out.println(csvStr.fromStringRepresentation(studentCsv).toString());
 //        System.out.println(group1);
+
+        GroupFileStorage.saveGroupToCSV(group1);
     }
 }
