@@ -69,9 +69,10 @@ public class Main {
 //        ================== Load group from CSV file to the certain file ==================
 
 //        Group group2 = GroupFileStorage.loadGroupFromCSV(in);
+//        System.out.println(group2);
 
 //        ================== Find the file by name in the particular folder ==================
 
-        System.out.println(GroupFileStorage.findFileByGroupName("TM", folder));
+//        System.out.println(GroupFileStorage.findFileByGroupName("TM", folder));
     }
 }

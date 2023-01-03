@@ -7,7 +7,6 @@ public class GroupFileStorage {
         Student[] students = group.getStudents();
 
         try (PrintWriter printWriter = new PrintWriter(csvOutputFile)) {
-//            printWriter.println("Name,LastName,Gender,ID,GroupName");
             for (Student s : students
             ) {
                 printWriter.println(s.getName() + "," + s.getLastName() + "," + s.getGender() + "," + s.getId() + "," + s.getGroupName());
