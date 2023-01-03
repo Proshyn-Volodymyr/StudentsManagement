@@ -1,9 +1,20 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Group group1 = new Group("TM");
         StudentCreateService scs = new StudentCreateService();
         CSVStringConverter csvStr = new CSVStringConverter();
+        File folder = new File("D:\\Documents\\java_practice\\pa_java_oop\\StudentsManagement", "workFolder");
+        folder.mkdir();
+        File in = new File(folder, "TM.csv");
+        try {
+            in.createNewFile();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
         Student student1 = new Student("Alex", "Mccain", Gender.MALE, 123, group1.getGroupName());
         Student student2 = new Student("John", "Smith", Gender.MALE, 111, group1.getGroupName());
@@ -33,25 +44,34 @@ public class Main {
         } catch (GroupOverflowException gex) {
             gex.printStackTrace();
         }
-        /* Search student by last name
-        * */
+//        ================== Search student by last name ==================
+
 //        try {
 //            group1.searchStudentByLastName("King");
 //        } catch (StudentNotFoundException fex) {
 //            fex.printStackTrace();
 //        }
+//        ================== Delete student by ID ==================
+
 //        group1.removeStudentById(123);
 
-//        for (Student student : group1.getStudents()) {
-//            if (student != null) {
-//                System.out.println(student.getLastName());
-//            }
-//        }
+//        ================== Sort student by last name ==================
+
 //        group1.sortStudentsByLastName();
+
 //        String studentCsv = csvStr.toStringRepresentation(scs.createStudent());
 //        System.out.println(csvStr.fromStringRepresentation(studentCsv).toString());
-//        System.out.println(group1);
 
-        GroupFileStorage.saveGroupToCSV(group1);
+//        ================== Save group to CSV file in certain folder ==================
+
+//        GroupFileStorage.saveGroupToCSV(folder,group1);
+
+//        ================== Load group from CSV file to the certain file ==================
+
+//        Group group2 = GroupFileStorage.loadGroupFromCSV(in);
+
+//        ================== Find the file by name in the particular folder ==================
+
+        System.out.println(GroupFileStorage.findFileByGroupName("TM", folder));
     }
 }
