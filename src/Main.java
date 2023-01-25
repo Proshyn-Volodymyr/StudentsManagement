@@ -42,16 +42,17 @@ public class Main {
 //        }
 //        group1.removeStudentById(123);
 
-//        for (Student student : group1.getStudents()) {
-//            if (student != null) {
-//                System.out.println(student.getLastName());
-//            }
-//        }
+        for (Student student : group1.getStudents()) {
+            if (student != null) {
+                System.out.println(student.getLastName());
+            }
+        }
 //        group1.sortStudentsByLastName();
 //        String studentCsv = csvStr.toStringRepresentation(scs.createStudent());
 //        System.out.println(csvStr.fromStringRepresentation(studentCsv).toString());
 //        System.out.println(group1);
 
-        GroupFileStorage.saveGroupToCSV(group1);
+//        GroupFileStorage.saveGroupToCSV(group1);
+        System.out.println(group1.isUnique());
     }
 }

@@ -54,6 +54,17 @@ public class Group {
         Arrays.sort(students, Comparator.nullsFirst(new StudentLastNameComparator()));
     }
 
+    public boolean isUnique(){
+        for (int i = 0; i < this.students.length - 1; i++) {
+            for (int j = i+1; j < this.students.length; j++) {
+                if(students[i].equals(students[j])){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
