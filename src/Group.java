@@ -9,6 +9,9 @@ public class Group {
     public Group(String groupName) {
         this.groupName = groupName;
     }
+    public Group(Student[]students){
+        this.students = students;
+    }
 
     public String getGroupName() {
         return groupName;
