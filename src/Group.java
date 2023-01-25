@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Group {
     private String groupName;
@@ -51,6 +52,19 @@ public class Group {
     }
     public void sortStudentsByLastName(){
         Arrays.sort(students, Comparator.nullsFirst(new StudentLastNameComparator()));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Group group = (Group) o;
+        return Objects.equals(groupName, group.groupName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(groupName);
     }
 
     @Override
